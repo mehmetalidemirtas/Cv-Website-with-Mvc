@@ -1,3 +1,1 @@
-$ github-linguist
-66.84%  264519     C#
-24.68%  97685      Html
+*.* linguist-language=Java
