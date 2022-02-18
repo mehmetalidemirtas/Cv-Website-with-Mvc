@@ -1,5 +1,4 @@
-# Cv Website with Mvc
- ## A Dynamic Web Project with Mvc5 
+ # A Dynamic Web Project with ASP.NET MVC 5
  
  - Database First
  - Repository Design Pattern
