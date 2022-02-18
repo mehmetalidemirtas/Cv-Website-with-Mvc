@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbCvModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Table_About">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Explanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Photo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table_Certificates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Explanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table_Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Topic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Table_Education">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Subtitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Subtitle2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GradePointAverage" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table_Experience">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Subtitle" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Explanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table_Interests">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Explanation1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Explanation2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table_Login">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table_Skills">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Skills" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DbCvEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Table_About" EntityType="Self.Table_About" />
+    <EntitySet Name="Table_Certificates" EntityType="Self.Table_Certificates" />
+    <EntitySet Name="Table_Contact" EntityType="Self.Table_Contact" />
+    <EntitySet Name="Table_Education" EntityType="Self.Table_Education" />
+    <EntitySet Name="Table_Experience" EntityType="Self.Table_Experience" />
+    <EntitySet Name="Table_Interests" EntityType="Self.Table_Interests" />
+    <EntitySet Name="Table_Login" EntityType="Self.Table_Login" />
+    <EntitySet Name="Table_Skills" EntityType="Self.Table_Skills" />
+    <EntitySet Name="Table_SocialMedia" EntityType="DbCvModel.Table_SocialMedia" />
+    <EntitySet Name="Table_ProgrammingLanguages" EntityType="DbCvModel.Table_ProgrammingLanguages" />
+  </EntityContainer>
+  <EntityType Name="Table_SocialMedia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Table_ProgrammingLanguages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

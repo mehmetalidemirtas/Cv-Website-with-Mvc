@@ -1,0 +1,32 @@
+﻿@model MvcCvProject.Models.Entity.Table_Education
+@{
+    ViewBag.Title = "UpdateEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="col-12">
+        <br />
+        <h2>Add New Education</h2>
+        <br />
+        <form method="post">
+            @Html.Label("Title")
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+            <br />
+            @Html.Label("Subtitle")
+            @Html.TextBoxFor(x => x.Subtitle, new { @class = "form-control" })
+            <br />
+            @Html.Label("Subtitle 2")
+            @Html.TextBoxFor(x => x.Subtitle2, new { @class = "form-control" })
+            <br />
+            @Html.Label("Grade Point Average")
+            @Html.TextBoxFor(x => x.GradePointAverage, new { @class = "form-control" })
+            <br />
+            @Html.Label("Date")
+            @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+            <br />
+            <button class="btn btn-info">Save</button>
+        </form>
+    </div>
+    <div class="col">
+    </div>
+</div>

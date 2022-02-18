@@ -1,0 +1,26 @@
+﻿@using MvcCvProject.Models.Entity
+@model List<Table_Interests>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="col-md-12">
+        <br />
+        <h2>Edit Your Interests</h2>
+        <br />
+        <form method="post">
+            @foreach (var x in Model)
+            {
+                <label>Explanation 1</label>
+                <textarea rows="7" class="form-control" name="Explanation1">@x.Explanation1</textarea>
+                <br />
+                <label>Explanation 2</label>
+                <textarea rows="7" class="form-control" name="Explanation2">@x.Explanation2</textarea>
+
+            }
+            <br />
+            <button class="btn btn-success">Save Changes</button>
+        </form>
+    </div>
+</div>

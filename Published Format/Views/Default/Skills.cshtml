@@ -1,0 +1,19 @@
+﻿@using MvcCvProject.Models.Entity
+@model List<Table_Skills>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+<div class="resume-section-content">
+    <h2 class="mb-5">Skills</h2>
+    <div class="subheading mb-3">Programming Languages & Tools</div>
+    @Html.Action("ProgrammingLanguages")
+    <div class="subheading mb-3">Workflow</div>
+    <ul class="fa-ul mb-0">
+        @foreach (var x in Model)
+        {
+            <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                @x.Skills
+            </li>
+
+        }
+    </ul>
+</div>

@@ -1,0 +1,40 @@
+﻿@using MvcCvProject.Models.Entity
+@model List<Table_Login>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="col-12">
+        <br />
+        <h2>Admin</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <th>@x.ID</th>
+                    <th>@x.Username</th>
+                    <th>
+                        <a href="/Admin/DeleteAdmin/@x.ID" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash"></i>
+                            Delete
+                        </a>
+                    </th>
+                    <th>
+                        <a href="/Admin/UpdateAdmin/@x.ID" class="btn btn-warning btn-sm">
+                            <i class="fas fa-pencil-alt"></i>
+                            Update
+                        </a>
+                    </th>
+                </tr>
+            }
+        </table>
+        <a href="/Admin/AddAdmin/" class="btn btn-primary">Add New Admin</a>
+    </div>
+</div>

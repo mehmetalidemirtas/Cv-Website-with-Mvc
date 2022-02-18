@@ -1,0 +1,74 @@
+﻿@using MvcCvProject.Models.Entity
+@model List<Table_SocialMedia>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+        <div class="col-12">
+            <br />
+            <h2>Social Media List</h2>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Name</th>                    
+                    <th>Update-Delete</th>
+                    <th>Change Status</th>
+                </tr>
+                @foreach (var x in Model)
+                {
+            <tr>
+                <th>@x.Name</th>                
+                <th>
+                    <a href="/SocialMedia/UpdateSocialMedia/@x.ID" class="btn btn-warning btn-sm">
+                        <i class="fas fa-pencil-alt"></i>
+                        Update
+                    </a>                
+                    <a href="/SocialMedia/DeleteSocialMedia/@x.ID" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash"></i>
+                        Delete
+                    </a>
+                </th>
+                <th>
+                    <a href="/SocialMedia/Active/@x.ID" class="btn btn-success btn-sm">
+                        <i class="fas fa-duotone fa-check"></i>
+                    </a>
+                    <a href="/SocialMedia/Inactive/@x.ID" class="btn btn-danger btn-sm">
+                        <i class="fas fa-duotone fa-ban"></i>
+                    </a>
+                </th>
+            </tr>
+                }
+            </table>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">Add New Social Media</button>
+        </div>
+    </div>
+</div>
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Add New Social Media</h2>
+            </div>
+            <form method="post" action="/SocialMedia/AddSocialMedia">
+                <div class="modal-body">
+                    <label>Social Media Name</label>
+                    <input type="text" name="Name" class="form-control" />
+                    <br />
+                    <label>Link</label>
+                    <input type="text" name="Link" class="form-control" />
+                    <br />
+                    <label>Icon</label>
+                    <input type="text" name="Icon" class="form-control" />
+                    <br />
+                    <label>Status</label>
+                    <input type="text" name="Status" class="form-control" />
+                    <br />
+                    <button class="btn btn-info">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

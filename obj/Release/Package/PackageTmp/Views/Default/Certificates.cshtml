@@ -1,0 +1,19 @@
+﻿@using MvcCvProject.Models.Entity
+@model List<Table_Certificates>
+<div class="resume-section-content">
+    <h2 class="mb-5">Certifications</h2>
+    <ul class="fa-ul mb-0">
+        @foreach (var x in Model)
+        {
+        <li>
+            <span class="fa-li">
+                <a href="@x.Link" target="_blank">
+                    <i class="fas fa-trophy text-warning"></i>
+                </a>
+            </span>
+                @x.Explanation
+        </li>
+        <br />
+        }
+    </ul>
+</div>

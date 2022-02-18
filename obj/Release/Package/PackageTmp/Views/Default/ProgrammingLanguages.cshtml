@@ -1,0 +1,8 @@
+﻿@using MvcCvProject.Models.Entity
+@model List<Table_ProgrammingLanguages>
+<ul class="list-inline dev-icons">
+    @foreach (var x in Model)
+    {
+        <li class="list-inline-item"><i class="@x.Link"></i></li>
+    }
+    </ul>
