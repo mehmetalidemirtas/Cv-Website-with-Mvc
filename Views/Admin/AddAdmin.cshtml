@@ -1,0 +1,23 @@
+﻿@model MvcCvProject.Models.Entity.Table_Login
+@{
+    ViewBag.Title = "AddAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="col-12">
+        <br />
+        <h2>Add New Admin</h2>
+        <br />
+        <form method="post">
+            @Html.Label("Username")
+            @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+            <br />
+            @Html.Label("Password")
+            @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+            <br />
+            <button class="btn btn-info">Save</button>
+        </form>
+    </div>
+    <div class="col">
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@using MvcCvProject.Models.Entity
+@model List<Table_Skills>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="col-12">
+        <br />
+        <h2>Skills List</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>Skill</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <th>@x.Skills</th>
+                    <th>
+                        <a href="/Skills/DeleteSkill/@x.ID" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash"></i>
+                            Delete
+                        </a>
+                    </th>
+                    <th>
+                        <a href="/Skills/UpdateSkill/@x.ID" class="btn btn-warning btn-sm">
+                            <i class="fas fa-pencil-alt"></i>
+                            Update
+                        </a>
+                    </th>
+                </tr>
+            }
+        </table>
+        <a href="/Skills/AddSkill" class="btn btn-primary">Add New Skill</a>
+    </div>
+</div>

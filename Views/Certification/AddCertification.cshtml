@@ -1,0 +1,31 @@
+﻿@model MvcCvProject.Models.Entity.Table_Certificates
+
+@{
+    ViewBag.Title = "AddCertification";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="col-12">
+        <br />
+        <h2>Add New Certification</h2>
+        <br />
+        <form method="post">
+            @Html.Label("Explanation")
+            @Html.TextBoxFor(x => x.Explanation, new { @class = "form-control" })
+            <br />
+            @Html.Label("Link")
+            @Html.TextBoxFor(x => x.Link, new { @class = "form-control" })
+            <br />
+            @Html.Label("Date")
+            @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+            <br />
+            <button class="btn btn-info">Save</button>
+        </form>
+    </div>
+    <div class="col">
+    </div>
+</div>
+
+
+

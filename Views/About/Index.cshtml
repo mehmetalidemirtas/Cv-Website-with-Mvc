@@ -1,0 +1,45 @@
+﻿@using MvcCvProject.Models.Entity
+@model List<Table_About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="col-md-12">
+        <br />
+        <h2>Edit Your About Page</h2>
+        <br />
+        <form method="post">
+            @foreach (var x in Model)
+            {
+                <label>Name</label>
+                <input type="text" name="Name" class="form-control" value="@x.Name" />
+                <br />
+                <label>Surname</label>
+                <input type="text" name="Surname" class="form-control" value="@x.Surname" />
+                <br />
+                <label>Address</label>
+                <input type="text" name="Address" class="form-control" value="@x.Address" />
+                <br />
+                <label>Telephone</label>
+                <input type="text" name="Telephone" class="form-control" value="@x.Telephone" />
+                <br />
+                <label>Mail</label>
+                <input type="email" name="Mail" class="form-control" value="@x.Mail" />
+                <br />
+                <label>Photo</label>
+                <input type="email" name="Photo" class="form-control" value="@x.Photo" />
+                <br />
+                <label>Explanation</label>
+                <textarea rows="7" class="form-control" name="Explanation">@x.Explanation</textarea>
+
+            }
+            <br />
+            <button class="btn btn-success">Save Changes</button>
+            <br />
+            <br />
+        </form>
+    </div>
+</div>
+
+
