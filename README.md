@@ -5,7 +5,7 @@
  - Authorization for Admin Panel
  - MsSQL
  
- ### Website Link : http://mehmetalidemirtas.com/
+ ### Website Link : http://mehmetalidemirtas.com/  -  http://mehmetalidemirtas.somee.com/
  
 ## Images from Admin Panel
 
